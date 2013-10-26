@@ -10,8 +10,7 @@
     </target>
 
     <target name="jar">
-        <mkdir dir="bin/jar"/>
-        <jar destfile="bin/jar/LearningJava.jar" basedir="build/classes">
+        <jar destfile="build/jar/LearningJava.jar" basedir="build/classes">
             <manifest>
                 <attribute name="Main-Class" value="com.agupta.questions.LongestPallindromeString"/>
             </manifest>
@@ -19,7 +18,7 @@
     </target>
 
     <target name="run">
-        <java jar="bin/jar/LearningJava.jar" fork="true"/>
+        <java jar="build/jar/LearningJava.jar" fork="true"/>
     </target>
 	
 	<target name="build" depends="clean,compile,jar,run" />
